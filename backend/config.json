@@ -1,0 +1,4 @@
+﻿{
+    "connectionString": "mongodb://localhost/job-board",
+    "secret": "PLEASE HIRE ME xD)"
+}

@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://naukaries.herokuapp.com",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

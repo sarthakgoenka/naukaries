@@ -26,30 +26,7 @@ export class ForrecruiterService {
       }
     );
   }
-//   getjobs()
-//   {
-//     const httpOptions = {
-//       headers: new HttpHeaders({
-//         'Accept': 'application/json, text/plain, */*',
-//          'Content-Type':'application/json',
-//         'Authorization': 'Bearer '+this.gettoken()
-//       })
-//     };
-//     console.log(httpOptions);
-//     return this.httpCli.get(`${PRIVATE}employees/getjobs/${this.getpayload().id}`,httpOptions);
-//   }
-//    applyjob(jobs:any)
-//   {
-//     const httpOptions = {
-//       headers: new HttpHeaders({
-//         'Content-Type':'application/json',
-//         'Authorization': 'Bearer'+' '+this.gettoken()
-//       })
-//     };
-//     let job_id:any=jobs.jobDetails._id;
-//     let emp_id:any=this.getpayload().id;
-//     return this.httpCli.get(`${PRIVATE}employees/apply/${emp_id}/${job_id}`,httpOptions);
-//   }
+
   getpostedjobs()
   {
     const httpOptions = {
@@ -89,16 +66,6 @@ export class ForrecruiterService {
     let token=this.gettoken();
     return JSON.parse(window.atob(token.split('.')[1]));
   }
-// getprofile()
-// {
-//   const httpOptions = {
-//     headers: new HttpHeaders({
-//       'Content-Type':'application/json',
-//       'Authorization': `Bearer${this.gettoken()}`
-//     })
-//   };
-//   return this.httpCli.get(`${PRIVATE}employees/profile/${this.getpayload().id}`,httpOptions);
-// }
   logout()
   {
     localStorage.removeItem('token');

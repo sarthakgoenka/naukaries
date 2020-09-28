@@ -6,14 +6,14 @@ export const environment = {
   production: false,
   ApiUrl:"http://localhost:3000/",
   firebaseConfig : {
-    apiKey: "AIzaSyAE-YEqjhSI8rrXa7x3ZHcInO3eSc2030M",
-    authDomain: "jobportal-8c3d9.firebaseapp.com",
-    databaseURL: "https://jobportal-8c3d9.firebaseio.com",
-    projectId: "jobportal-8c3d9",
-    storageBucket: "jobportal-8c3d9.appspot.com",
-    messagingSenderId: "836069109564",
-    appId: "1:836069109564:web:a851b37e7798b050c67839",
-    measurementId: "G-JBLLNFT3HL"
+    apiKey: "AIzaSyBf_o7lyHo3wWibWZ6WG3KmTW01BZ00Me4",
+    authDomain: "naukaries-c69f9.firebaseapp.com",
+    databaseURL: "https://naukaries-c69f9.firebaseio.com",
+    projectId: "naukaries-c69f9",
+    storageBucket: "naukaries-c69f9.appspot.com",
+    messagingSenderId: "402729519288",
+    appId: "1:402729519288:web:812eb149d17a2f970c8c4d",
+    measurementId: "G-1H6BC0Z031"
   }
 };
 

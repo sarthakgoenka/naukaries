@@ -1,5 +1,15 @@
 {
   "/api/*": {
+    "target": "https://naukaries.herokuapp.com/",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/employee/*": {
+    "target": "https://naukaries.herokuapp.com",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/recruiter/*": {
     "target": "https://naukaries.herokuapp.com",
     "secure": false,
     "logLevel": "debug"

@@ -1,4 +1,4 @@
 ﻿{
-    "connectionString": "mongodb://localhost/job-board",
+    "connectionString": "mongodb+srv://sarthak:yourPassword@angular-job-uxkpp.mongodb.net/job-angular?retryWrites=true&w=majority'",
     "secret": "PLEASE HIRE ME xD)"
 }

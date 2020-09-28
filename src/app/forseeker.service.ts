@@ -40,39 +40,6 @@ export class ForseekerService {
     // console.log(httpOptions);
     return this.httpCli.get(`${PRIVATE}employees/getjobs/${this.getpayload().id}`,httpOptions);
   }
-  searchbycompany(companyname)
-  {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type':'application/json',
-        'Authorization': 'Bearer '+this.gettoken()
-      })
-    };
-    return this.httpCli.get(`${PRIVATE}employees/companyname/${companyname}`,httpOptions);
-  }
-  searchbyrole(jobrole:any)
-  {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type':'application/json',
-        'Authorization': 'Bearer '+this.gettoken()
-      })
-    };
-    return this.httpCli.get(`${PRIVATE}employees/jobrole/${jobrole}`,httpOptions);
-  }
-  searchlatestjobs()
-  {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type':'application/json',
-        'Authorization': 'Bearer '+this.gettoken()
-      })
-    };
-    return this.httpCli.get(`${PRIVATE}employees/latest`,httpOptions);
-  }
   applyjob(jobs:any)
   {
     const httpOptions = {
@@ -95,11 +62,6 @@ export class ForseekerService {
     };
     return this.httpCli.get(`${PRIVATE}employees/appliedlist/${this.getpayload().username}`,httpOptions);
   }
-  uploadprofilepic(fd:any)
-  {
-    return this.httpCli.post(`${PRIVATE}employee/uploadpicture/${this.getpayload().id}`,fd);
-
-  }
   gettoken()
   {
     return localStorage.getItem('token');
@@ -108,26 +70,6 @@ export class ForseekerService {
   {
     let token=this.gettoken();
     return JSON.parse(window.atob(token.split('.')[1]));
-  }
-  Empupdateprofile(body:any)
-  {
-    return this.httpCli.put(`${PRIVATE}employees/editprofile`,body,
-      {
-
-        observe:'body',
-        headers:new HttpHeaders().append('Content-Type','application/json')
-
-      });
-  }
-  getprofile()
-  {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':'application/json',
-        'Authorization': `Bearer${this.gettoken()}`
-      })
-    };
-    return this.httpCli.get(`${PRIVATE}employees/profile/${this.getpayload().id}`,httpOptions);
   }
   logout()
   {
